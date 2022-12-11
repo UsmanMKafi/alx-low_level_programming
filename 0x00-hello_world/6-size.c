@@ -5,18 +5,19 @@
  * Return - 0
  **/
 
-int main (void)
+int main(void)
 {
-	char char_type;
-	int int_type;
-	long int long_int type;
-	long long int long_l_int type;
-	float float_type;
+	int a;
+	long int b;
+	long long int c;
+	char d;
+	float f;
 
-	printf("size of a char: d% byte(s)\n", (int)sizeof(char_type));
-	printf("size of an int: %d byte(s)\n", (int)sizeof(int_type));
-	printf("size of a long int: d% byte(s)\n", (int)sizeof(long_int_type));
-	printf("size of a long long int: d% byte(s)\n", (int)sizeof(long_l_int_type));
-	printf("size of a float: d% byte(s)\n", (int)sizeof(float_type));
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
+
 	return (0);
 }
