@@ -1,21 +1,20 @@
+#include <stdio.h>
 #include "main.h"
+#include <unistd.h>
 /**
- * main - main block
+ * Main - Entry point
  * Description: prints _putchar
- * return: 0
+ * Return: 0
  */
-
-int main(void)
+int main(void);
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	char w[8] = "_putchar";
+	int counter;
 
+	for (counter = 0; counter < 8; counter++)
+	{
+		_putchar(w[counter]);
+	}
+	_putchar('\n');
 	return (0);
 }
