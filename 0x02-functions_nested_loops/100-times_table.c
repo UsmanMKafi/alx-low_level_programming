@@ -2,24 +2,24 @@
 #include "main.h"
 
 /**
- * print_times_table - function entry point.
+ * print_times_table - function entry point
  * Description - function that prints the n times table, starting with 0.
- * @n: Input
- * Return: times table
+ * @n: input
+ * Return - times table
  * with extra space after each digit
  */
 
 void print_times_table(int n)
 {
 	int row, column, num;
-
+	
 	if (n > 15 || n < 0)
 	{
 		return;
 	}
 	else
 	{
-		for (row = 0; row <= n; row++)
+		for (row 0; row <= n; row++)
 		{
 			_putchar('0');
 
@@ -33,7 +33,6 @@ void print_times_table(int n)
 	}
 }
 
-
 /**
  * formatfunc - Entry point
  * Description - function for formatting output
@@ -44,7 +43,7 @@ void print_times_table(int n)
 void formatfunc(int n)
 {
 	if (n <= 9)
-	{
+		{
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
@@ -68,3 +67,24 @@ void formatfunc(int n)
 		_putchar(n % 10 + '0');
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
