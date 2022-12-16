@@ -1,30 +1,40 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints the numbers from 1 to 100 followed by a new line
- * for multiples of 3 print Fizz
- * for multiples of 5 print Buzz
- * for multipes of 3 and 5 print FizzBuzz
- *
- * Return: returns 0
+ * print_triangle - function to print a triangle aligned
+ * right, using '#' symbol
+ * @size: size of triangle
  */
-int main(void)
+void print_triangle(int size)
 {
-int i;
+	int c, a, b;
 
-for (i = 1; i <= 100; i++)
-{
-if (i % 5 == 0 && i % 3 == 0)
-printf("%s", "FizzBuzz");
-else if (i % 3 == 0)
-printf("%s", "Fizz");
-else if (i % 5 == 0)
-printf("%s", "Buzz");
-else
-printf("%d", i);
-if (i != 100)
-printf(" ");
-}
-printf("\n");
-return (0);
+	c = 0;
+	a = size - 1;
+	
+	if (size == 0 || size < 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{	
+		while (c < size)
+		{
+			a = size - 1 - c;
+			b = c + 1;
+
+			while (a > 0)
+			{
+				_putchar(' ');
+				a--;
+			}	
+			while (b > 0)
+			{
+				_putchar('#');
+				b--;
+			}
+			_putchar('\n');
+			c++;
+		}
+	}
 }
