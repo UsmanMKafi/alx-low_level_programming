@@ -1,36 +1,40 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * print_triangle - Function that prints a triangle, followed by a new line.
- * @size: the int for the paramaters of my function
- * Return: Always 0.
+ * print_triangle - function to print a triangle aligned
+ * right, using '#' symbol
+ * @size: size of triangle
  */
 void print_triangle(int size)
 {
-	int x, y = 0;
-	int space;
+	int c, a, b;
 
-	if (size > 0)
+	c = 0;
+	a = size - 1;
+	if (size == 0 || size < 0)
 	{
-		while (y < size)
-		{
-			space = size - y - 1;
-			while (x < size)
-			{
-				if (space > x)
-				{
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar('#');
-				}
-				x++;
-			}
-			y++;
-			x = 0;
-			_putchar ('\n');
-		}
+		_putchar('\n');
 	}
 	else
-		_putchar('\n');
+	{
+		while (c < size)
+		{
+			a = size - 1 - c;
+			b = c + 1;
+
+			while (a > 0)
+			{
+				_putchar(' ');
+				a--;
+
+			}	
+			while (b > 0)
+			{
+				_putchar('#');
+				b--;
+			}
+			_putchar('\n');
+			c++;
+		}
+	}
 }
