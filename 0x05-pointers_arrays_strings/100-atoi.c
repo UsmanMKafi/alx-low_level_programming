@@ -1,93 +1,62 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #include "main.h"
 
 /**
- * _atoi - function entry point
- * Description - a function that convert a string to an integer
- * @s: char input
- * Return: converted string
+ * _atoi - convert a string to an integer.
+ * @s: the string to be comverted.
+ *
+ *Return: The integer value of the comverted string.
  */
 
 int _atoi(char *s)
 {
-	int len;
-	int a, b;
 
-	a = -1;
-	b = 0;
+	int sign = 1;
+	unsigned int num = 0;
 
-	for (len = 0; s[len] != '\0'; len++)
-	{
-		if (*s == -1)
-		{
-			a = a * (-1);
-		}
+	do {
 
-		if (*s >= '0' && *s <= '9')
-		{
-			if (b < 0)
-			{
-				b = (b * 10) - (s[len] - '0');
-			}
-			else
-			{
-				b = (s[len] - '0') * (-1);
-			}
+		if (*s == '-')
+			sign *= -1;
 
-			if (s[len + 1] < 48 || s[len + 1] > 57)
-			{
-				break;
-			}
-		}
-	}
-	if (a < 0)
-	{
-		b = b * (-1);
-	}
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
 
-	return (b);
+		else if (num > 0)
+			break;
+
+	} while (*s++);
+
+	return (num * sign);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
