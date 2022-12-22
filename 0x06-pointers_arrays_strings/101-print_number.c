@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_number - funnction entry point 
+ * print_number - funnction entry point
  * Description - Print an integer using only _putchar
  * @n: integer value
  */
@@ -9,7 +9,7 @@
 void print_number(int n)
 {
 	unsigned int i;
-	
+
 	i = n;
 
 	if (n < 0)
