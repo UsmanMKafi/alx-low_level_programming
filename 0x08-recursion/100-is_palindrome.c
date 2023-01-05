@@ -1,50 +1,57 @@
 #include "main.h"
+
 /**
- * is_palindrome-  Returns the natural square root of a number.
- * @s: int type
- * Return: char type
- **/
+ * long_1 - Function entry point
+ * @s: number
+ *
+ * Return: zero (0) or value.
+ */
+
+int long_1(char *s)
+{
+	if (*s != '\0')
+	{
+		return (1 + long_1(s + 1));
+	}
+	else
+	{
+		return (0);
+	}
+
+}
+/**
+ * compare - Function entry point
+ * @s: number
+ * @l: lenght
+ *
+ * Return: zero(0) or value.
+ */
+int compare(char *s, int l)
+{
+	if (l <= 0)
+	{
+		return (1);
+	}
+	if (*s == *(s + (l - 1)))
+	{
+		return (compare(s + 1, l - 2));
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ * is_palindrome - Function entry point
+ * @s: character
+ *
+ * Return: value.
+ */
 int is_palindrome(char *s)
 {
-int first, last;
+	int l;
 
-first = 0;
-last = _strlen_recursion(s) - 1;
-return (palindrome(s, first, last));
+	l = long_1(s);
+	return (compare(s, l));
 }
-
-/**
- * palindrome - Entry point
- * Desc: palindrome
- * @s: char type
- * @first: int type
- * @last: int type
- * Return: Recursion
- **/
-int palindrome(char *s, int first, int last)
-{
-if (first > last)
-{
-return (1);
-}
-else if (s[first] == s[last])
-{
-return (palindrome(s, first + 1, last - 1));
-}
-else
-return (0);
-}
-
-/**
- * _strlen_recursion - Entry point
- * Desc: _strlen_recursion
- * @s: char type
- * Return: Function that returns the length of a string.
- **/
-int _strlen_recursion(char *s)
-{
-if (*s != '\0')
-{
-return (1 + _strlen_recursion(s + 1));
-}
-return (0);
